@@ -31,12 +31,16 @@
 }
 
 body {
-	background-color: #ddd; font-family: "Ancizar sans", Tahoma, Geneva, sans-serif; display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; min-height: 100vh; -webkit-box-direction: normal; -webkit-box-orient: vertical; -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column; overflow-y: scroll;
+	background-color: #3a3a3a; font-family: "Ancizar sans", Tahoma, Geneva, sans-serif; display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; min-height: 100vh; -webkit-box-direction: normal; -webkit-box-orient: vertical; -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column; overflow-y: scroll;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Ancizar serif", "MS Serif", "New York", serif;
+}
+
+#bs-navbar {
+	background: #3a3a3a;
 }
 
 
@@ -154,6 +158,7 @@ ul.dropdown-menu a:focus {
 }
 
 #unalTop .logo {
+	background-color: #333;
 	-webkit-transition: width .5s; -moz-transition: width .5s; -o-transition: width .5s; transition: width .5s; background: no-repeat url(../images/sealBck.png); float: left; height: 135px; width: 234px; margin-left: 10px; position: absolute; text-align: center; z-index: 1;
 }
 
@@ -433,6 +438,7 @@ ul.dropdown-menu a:focus {
 
 #unalTop .navigation {
 	background: url(../images/navigationBack.png); color: white; padding: 0;
+	background-color: #333;
 }
 
 .main_menu .site-url,
@@ -472,7 +478,7 @@ input#gsc-i-id1.gsc-input{
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input input,
 #unalTop .navigation .buscador .gsc-control-searchbox-only .gsc-input input {
-	background: none !important; text-indent: 0 !important; color: #ddd; display: inline; font-size: 1.2em; width: 150px!important;
+	background: none !important; text-indent: 0 !important; color: #333; display: inline; font-size: 1.2em; width: 150px!important;
 }
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input input::placeholder,
@@ -838,7 +844,7 @@ footer .logos a img {
 		line-height: inherit; color: white; padding: 3px 10px; font-size: 1em; line-height: 1.429em;
 	}
 	#unalTop .logo {
-		background: none; width: 103px; margin-left: 0; height: 54px; z-index: 1;
+		background-color: #333; width: 103px; margin-left: 0; height: 54px; z-index: 10;
 	}
 	#unalTop .logo a {
 		display: block; height: 100%; width: 100%;
