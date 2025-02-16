@@ -22,11 +22,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="all" />
 
-    <style type="text/css">
-
-    </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <style type="text/css"></style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -96,8 +102,9 @@
     <header id="unalTop">
       <div class="logo">
         <a href="https://unal.edu.co">
-          <img src="https://ingenieria.unal.edu.co/lab101/suba-unal/images/escudoUnal.png" 
-            alt="Escudo de la Universidad Nacional de Colombia" 
+          <img
+            src="https://ingenieria.unal.edu.co/lab101/suba-unal/images/escudoUnal.png"
+            alt="Escudo de la Universidad Nacional de Colombia"
             class="hidden-print"
             width="93%"
           />
@@ -343,11 +350,21 @@
           <a href="http://correo.unal.edu.co" target="_top"
             >Correo institucional</a
           >
-          <a href="index.html#">Mapa del sitio</a>
+          <a
+            href="#"
+            id="mapaSitioLink"
+            data-src="https://ingenieria.unal.edu.co/lab101/wp-suba-unal/mapa-del-sitio/"
+            >Mapa del Sitio</a
+          >
           <a href="http://redessociales.unal.edu.co" target="_top"
             >Redes Sociales</a
           >
-          <a href="index.html#">FAQ</a>
+          <a
+            href="#"
+            id="faq"
+            data-src="https://ingenieria.unal.edu.co/lab101/wp-suba-unal/faq/"
+            >FAQ</a
+          >
           <a href="http://unal.edu.co/quejas-y-reclamos/" target="_self"
             >Quejas y reclamos</a
           >
@@ -355,23 +372,33 @@
             >Atención en línea</a
           >
           <a href="http://unal.edu.co/encuesta/" target="_self">Encuesta</a>
-          <a href="#" id="contactoLink">Contáctenos</a>
-
-          <script>
-            document
-              .getElementById("contactoLink")
-              .addEventListener("click", function (event) {
-                event.preventDefault();
-                document.getElementById("myIframe").src =
-                  "https://ingenieria.unal.edu.co/lab101/wp-suba-unal/contact/";
-              });
-          </script>
+          <a
+            href="#"
+            id="contactoLink"
+            data-src="https://ingenieria.unal.edu.co/lab101/wp-suba-unal/contact/"
+            >Contáctenos</a
+          >
 
           <a href="http://estadisticas.unal.edu.co/" target="_top"
             >Estadísticas</a
           >
-          <a href="index.html#">Glosario</a>
+          <a
+            href="#"
+            id="glosario"
+            data-src="https://ingenieria.unal.edu.co/lab101/wp-suba-unal/glosario/"
+            >Glosario</a
+          >
         </nav>
+
+        <script>
+          document.querySelectorAll("[data-src]").forEach((element) => {
+            element.addEventListener("click", function (event) {
+              event.preventDefault();
+              document.getElementById("myIframe").src = this.dataset.src;
+            });
+          });
+        </script>
+
         <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-info">
           <div class="row footer-info-spacing">
             <p class="col-lg-6 col-md-12 col-sm-12 col-6 contacto">
